@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cutting Edge Glass · Bespoke Glazing · Parsippany, NJ</title>
+<meta name="description" content="Bespoke glazing installations for architects, builders and owners across the tri-state area and beyond. Curtain wall, storefronts, structural glass and frameless enclosures. Parsippany, since 1998.">
+<meta name="theme-color" content="#0A0B0C">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Cutting Edge Glass, Inc.","telephone":"+1-973-664-9893","foundingDate":"1998","address":{"@type":"PostalAddress","streetAddress":"14 Eastmans Road","addressLocality":"Parsippany","addressRegion":"NJ","postalCode":"07054","addressCountry":"US"},"areaServed":["New Jersey","New York","Pennsylvania","Connecticut"]}
+</script>
+<style>
+:root{
+  --black:#0A0B0C; --trim:#050606; --graphite:#121416; --slate:#1A1D20; --line:#262A2E; --steel:#5B6268;
+  --mist:#8E959A; --fog:#B8BDC0; --white:#ECEDEC; --edge:#9CC4B7;
+  --pad:clamp(16px,4vw,48px); --mull:clamp(6px,.8vw,10px);
+  --sans:'Jost','Futura','Century Gothic',system-ui,sans-serif; --mono:var(--sans);
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scrollbar-color:var(--steel) var(--black)}
+body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-kerning:normal;overflow-x:hidden}
+::selection{background:var(--edge);color:var(--black)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-weight:400;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:1px solid var(--edge);outline-offset:4px}
+.center{text-align:center;display:flex;flex-direction:column;align-items:center}
+.meta{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;white-space:nowrap;font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--white);border:1px solid var(--steel);background:rgba(255,255,255,.02);cursor:pointer;transition:border-color .4s,background .4s,color .4s}
+.btn:hover{border-color:var(--fog);background:rgba(255,255,255,.07)}
+.btn.solid{background:var(--white);color:var(--black);border-color:var(--white)}
+.btn.solid:hover{background:var(--edge);border-color:var(--edge)}
+
+/* glass: frosted pane with a lit top edge */
+.glass{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.09)}
+.glass::before{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:linear-gradient(90deg,transparent,rgba(156,196,183,.7) 30%,rgba(255,255,255,.8) 50%,rgba(156,196,183,.7) 70%,transparent)}
+
+/* the window unit: one black aluminum frame, panes separated by mullions */
+.unit{display:grid;gap:var(--mull);padding:var(--mull);background:var(--trim);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05),0 40px 80px -40px rgba(0,0,0,.9)}
+.lite{position:relative;overflow:hidden;background:var(--slate);margin:0;min-height:0}
+.lite img{width:100%;height:100%;object-fit:cover}
+.lite::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.07) 50%,rgba(255,255,255,0) 60%);background-size:250% 100%;background-position:120% 0;transition:background-position 1.6s var(--ease)}
+.lite:hover::after{background-position:-20% 0}
+.lite figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);background:linear-gradient(0deg,rgba(5,6,6,.8),rgba(5,6,6,0))}
+
+/* review banner: this is a mockup */
+.mockbar{position:relative;z-index:6;background:var(--edge);color:var(--black);text-align:center;font-size:13px;font-weight:500;letter-spacing:.06em;padding:8px var(--pad);line-height:1.4}
+.sample{display:inline-block;margin-left:10px;padding:2px 8px;border:1px solid var(--edge);color:var(--edge);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;vertical-align:middle;white-space:nowrap}
+
+/* top bar */
+.top{position:absolute;top:0;left:0;right:0;z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px var(--pad)}
+.top .where{font-size:13px;color:var(--fog)}
+.top .logo img{height:44px;width:auto}
+.top .right{justify-self:end;display:flex;align-items:center;gap:22px}
+.top .tel{font-family:var(--mono);font-size:14px;letter-spacing:.06em;color:var(--fog);min-height:44px;display:inline-flex;align-items:center}
+.top .tel:hover{color:var(--white)}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;background:var(--black)}
+.hero .ph{position:absolute;inset:-8% 0 0;will-change:transform}
+.hero .ph img{width:100%;height:100%;object-fit:cover;opacity:.82}
+.hero .shade{position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 100%,rgba(10,11,12,.9) 0%,rgba(10,11,12,.35) 55%,rgba(10,11,12,.15) 100%),linear-gradient(180deg,rgba(10,11,12,.55),rgba(10,11,12,0) 25%)}
+canvas.light{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen}
+.hero .copy{position:absolute;left:0;right:0;bottom:clamp(90px,13vh,140px);z-index:3;padding:0 var(--pad);gap:26px}
+.hero h1{font-size:clamp(44px,6.6vw,104px);line-height:.98;letter-spacing:-.02em}
+.hero .sub{max-width:44ch;color:var(--fog);font-size:18px}
+.cue{position:absolute;left:50%;bottom:28px;z-index:3;transform:translateX(-50%);width:1px;height:44px;background:linear-gradient(var(--fog),transparent);overflow:hidden}
+.cue::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--white);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+
+/* intro */
+.intro{padding:clamp(130px,16vw,230px) var(--pad) clamp(110px,13vw,190px);gap:44px}
+.intro h2{font-size:clamp(32px,4.2vw,64px);line-height:1.1;letter-spacing:-.015em;max-width:20ch}
+.intro h2 span{color:var(--mist)}
+.intro p{max-width:58ch;color:var(--fog)}
+
+/* collection: one window, four lites */
+.collection{padding:0 var(--pad) clamp(120px,14vw,210px)}
+.collection h2{font-size:clamp(40px,5vw,80px);line-height:1;letter-spacing:-.02em;margin-bottom:clamp(48px,6vw,80px)}
+.collection .unit{max-width:1360px;margin:0 auto;grid-template-columns:repeat(4,1fr)}
+.collection .lite{aspect-ratio:4/5}
+.collection .lite img{transform:scale(1.03);filter:grayscale(1) contrast(1.08) brightness(.9);transition:transform 1.4s var(--ease),filter 1.2s var(--ease)}
+.collection a:hover .lite img,.collection a:focus-visible .lite img{transform:scale(1.08);filter:none}
+@media (hover:none){.collection .lite img{filter:none}}
+.collection a{display:block}
+.names{max-width:1360px;margin:22px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--mull);text-align:center}
+.names a{display:flex;flex-direction:column;gap:6px;padding:4px}
+.names h3{font-size:clamp(22px,1.8vw,28px);letter-spacing:-.025em;line-height:1.1}
+.names span{font-size:14px;color:var(--mist)}
+.names a:hover h3{color:var(--edge)}
+
+/* band */
+.band{position:relative;height:clamp(460px,72vh,800px);overflow:hidden;display:grid;place-items:center;text-align:center;padding:0 var(--pad)}
+.band .ph{position:absolute;inset:-12% 0;will-change:transform}
+.band .ph img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.band .fade{position:absolute;inset:0;background:linear-gradient(180deg,var(--black),rgba(10,11,12,.15) 30%,rgba(18,20,22,.15) 70%,var(--graphite))}
+.band canvas.light{opacity:.6}
+.band p{position:relative;z-index:2;font-size:clamp(40px,6.2vw,100px);letter-spacing:-.02em;line-height:1;max-width:15ch;color:var(--white)}
+
+/* work */
+.work{padding:clamp(100px,12vw,180px) var(--pad) 0;background:var(--graphite)}
+.work > h2{font-size:clamp(40px,5vw,80px);line-height:1;letter-spacing:-.02em;text-align:center;margin:0 auto clamp(90px,11vw,150px);max-width:16ch}
+.case{max-width:1240px;margin:0 auto;padding-bottom:clamp(110px,13vw,190px)}
+.case + .case{padding-top:clamp(100px,12vw,170px);border-top:1px solid var(--line)}
+.case .title{gap:16px;margin-bottom:clamp(40px,5vw,64px)}
+.case h3{font-size:clamp(40px,7vw,116px);line-height:.95;letter-spacing:-.02em}
+.case .lede{font-size:clamp(19px,1.8vw,24px);line-height:1.4;letter-spacing:-.01em;color:var(--fog);max-width:36ch;margin-top:8px}
+.dover{grid-template-columns:1.1fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:16/10}
+.dover .tall{grid-row:1/3}
+.beretta{grid-template-columns:1fr 1fr}
+.beretta .wide{grid-column:1/-1;aspect-ratio:2/1}
+.beretta .half{aspect-ratio:3/2}
+.district{max-width:900px;margin:0 auto}
+.story{max-width:640px;margin:clamp(56px,6vw,88px) auto 0;display:flex;flex-direction:column;gap:20px;color:var(--fog);font-size:18px;line-height:1.7;text-align:center}
+.facts{max-width:1120px;margin:clamp(48px,5vw,72px) auto 0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:26px 16px;text-align:center;display:flex;flex-direction:column;gap:8px;border-left:1px solid var(--line)}
+.facts div:first-child{border-left:0}
+.facts dt{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+.facts dd{margin:0;font-size:16px;line-height:1.4}
+
+/* company */
+.company{padding:clamp(120px,14vw,200px) var(--pad);gap:28px;border-top:1px solid var(--line)}
+.company h2{font-size:clamp(40px,5vw,80px);line-height:1;letter-spacing:-.02em}
+.company > p{max-width:56ch;color:var(--fog)}
+.company .facts{width:100%;margin-top:32px}
+.company .about{max-width:62ch;display:flex;flex-direction:column;gap:18px;color:var(--fog)}
+.company .about a{color:var(--white);text-decoration:underline;text-decoration-color:var(--steel);text-underline-offset:4px}
+.company .about a:hover{text-decoration-color:var(--edge)}
+.timeline{list-style:none;margin:56px 0 0;padding:0;width:100%;max-width:1240px;display:grid;grid-template-columns:repeat(7,1fr);gap:var(--mull);background:var(--trim);padding:var(--mull);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.timeline li{background:var(--graphite);padding:28px 14px 30px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.timeline b{font-weight:300;font-size:clamp(34px,3.4vw,48px);letter-spacing:-.01em;line-height:1}
+.timeline span{font-size:15px;line-height:1.4;color:var(--fog)}
+.more{max-width:1120px;margin:0 auto;padding-bottom:clamp(110px,13vw,190px)}
+.more h3{font-size:clamp(30px,3vw,44px);letter-spacing:-.015em;text-align:center;margin-bottom:36px}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:minmax(220px,1.2fr) 2fr minmax(140px,.8fr);gap:24px;align-items:baseline;padding:24px 8px;border-bottom:1px solid var(--line);transition:background .4s}
+.rows li:hover{background:rgba(255,255,255,.025)}
+.rows .n{font-size:clamp(20px,1.8vw,26px);letter-spacing:-.01em}
+.rows .d{color:var(--fog);font-size:16px}
+.rows .w{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);text-align:right}
+.company .clients{margin-top:88px;font-size:14px;color:var(--mist)}
+.logos{width:100%;max-width:1120px;margin:20px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logos li{height:120px;display:flex;align-items:center;justify-content:center;border-left:1px solid var(--line);padding:0 16px}
+.logos li:first-child,.logos li:nth-child(6){border-left:0}
+.logos li:nth-child(n+6){border-top:1px solid var(--line)}
+.logos img{width:auto;max-width:100%;filter:brightness(0) invert(1);opacity:.72;transition:opacity .4s}
+.logos li:hover img{opacity:1}
+.logos .word{font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.1;color:rgba(236,237,236,.72);text-align:center}
+
+/* estimate */
+.estimate{position:relative;overflow:hidden;padding:clamp(120px,14vw,200px) var(--pad);background:radial-gradient(80% 60% at 50% 40%,#16191C,var(--black));border-top:1px solid var(--line)}
+.estimate canvas.light{opacity:.45}
+.estimate .head{position:relative;gap:24px;margin-bottom:56px}
+.estimate h2{font-size:clamp(52px,7.6vw,124px);line-height:.94;letter-spacing:-.02em}
+.estimate .head p{max-width:46ch;color:var(--fog)}
+form{position:relative;max-width:800px;margin:0 auto;padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:24px 28px}
+.field{display:flex;flex-direction:column;gap:4px;text-align:left}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:500;color:var(--fog)}
+.field label b{color:var(--edge);font-weight:500}
+.field input,.field select,.field textarea{font:inherit;font-size:17px;color:var(--white);background:transparent;border:0;border-bottom:1px solid var(--steel);border-radius:0;padding:10px 0;min-height:46px;-webkit-appearance:none;appearance:none;transition:border-color .3s}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--fog) 50%),linear-gradient(135deg,var(--fog) 50%,transparent 50%);background-position:calc(100% - 10px) 52%,calc(100% - 5px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+.field select:invalid{color:var(--mist)}
+.field select option{color:#000}
+.field textarea{resize:vertical;min-height:96px;line-height:1.5}
+.field input::placeholder,.field textarea::placeholder{color:var(--mist)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--edge)}
+.field input:user-invalid,.field select:user-invalid{border-bottom-color:#E08A7A}
+form .go{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:12px}
+form .go small{font-size:14px;color:var(--mist)}
+.sent{grid-column:1/-1;text-align:center;font-size:15px;color:var(--fog);min-height:1em}
+.sent a{color:var(--edge)}
+.reach{position:relative;max-width:1120px;margin:72px auto 0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.reach div{padding:26px 16px 0;text-align:center;font-size:16px;display:flex;flex-direction:column;gap:6px}
+.reach a:hover{color:var(--edge)}
+
+/* footer */
+footer{background:var(--trim);border-top:1px solid var(--line);padding:clamp(80px,9vw,120px) var(--pad) 48px;gap:24px;font-size:15px;color:var(--mist)}
+footer img{width:min(240px,58vw);opacity:.92}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;column-gap:28px;font-size:14px;color:var(--fog)}
+footer nav a{min-height:44px;display:inline-flex;align-items:center}
+footer nav a:hover{color:var(--white)}
+footer .legal{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+
+/* quiet floating nav */
+.pill{position:fixed;left:50%;bottom:18px;z-index:50;display:flex;align-items:center;gap:2px;padding:4px;transform:translate(-50%,160%);transition:transform .8s var(--ease)}
+.pill.show{transform:translate(-50%,0)}
+.pill a,.pill button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 16px;font:500 13px/1 var(--sans);color:var(--fog);background:none;border:0;cursor:pointer;transition:color .3s,background .3s}
+.pill a:hover,.pill button:hover{color:var(--white)}
+.pill .home{width:44px;padding:0}
+.pill .home i{width:14px;height:1px;background:var(--white)}
+.pill .est{background:var(--white);color:var(--black)}
+.pill .est:hover{background:var(--edge);color:var(--black)}
+.menu{position:fixed;inset:0;z-index:45;background:rgba(10,11,12,.86);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+body.menu-open .menu{opacity:1;visibility:visible}
+.menu a{font-size:clamp(34px,5.6vw,72px);letter-spacing:-.02em;line-height:1.15;color:var(--mist);transition:color .3s}
+.menu a:hover{color:var(--white)}
+.menu .small{margin-top:40px;font-size:14px;color:var(--mist);text-align:center}
+
+/* reveal: one quiet rise, nothing else */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .top{grid-template-columns:auto 1fr}
+  .top .where{display:none}
+  .top .logo img{height:36px}
+  .top .tel{font-family:var(--sans);font-size:14px;letter-spacing:0}
+  .top .tel .num{display:none}
+  .collection .unit,.names{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .reach{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .timeline li:last-child{grid-column:1/-1}
+  .rows li{grid-template-columns:1fr;gap:6px;padding:20px 4px}
+  .rows .w{text-align:left}
+  .logos{grid-template-columns:1fr 1fr}
+  .logos li{height:96px;border-top:1px solid var(--line)}
+  .logos li:nth-child(odd){border-left:0}
+  .logos li:nth-child(-n+2){border-top:0}
+  .logos li:nth-child(6){border-left:1px solid var(--line)}
+  .logos li:nth-child(odd){border-left:0}
+}
+@media (min-width:901px){.top .tel .word{display:none}}
+@media (max-width:640px){
+  .dover{grid-template-columns:1fr;grid-template-rows:none;aspect-ratio:auto}
+  .dover .tall{grid-row:auto;aspect-ratio:4/5}
+  .dover .lite:not(.tall){aspect-ratio:3/2}
+  .beretta{grid-template-columns:1fr}
+  .beretta .wide{aspect-ratio:3/2}
+  form{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(40px,11.5vw,60px)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .cue::after{animation:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="mockbar" role="note">Mockup for review · Not for publication · Photos are placeholders</div>
+
+<header class="hero" id="top">
+  <div class="ph" id="heroPh"><img src="img/hero.webp" alt="Frameless glass panels held by polished standoffs" fetchpriority="high"></div>
+  <canvas class="light" data-strength=".42" aria-hidden="true"></canvas>
+  <div class="shade"></div>
+  <div class="top">
+    <span class="where">Parsippany, NJ · Since 1998</span>
+    <a class="logo" href="#top"><img src="img/logo-light.png" alt="Cutting Edge Glass, home"></a>
+    <div class="right">
+      <a class="tel" href="tel:+19736649893"><span class="num">973.664.9893</span><span class="word">Call</span></a>
+      <a class="btn" href="#estimate">Get an estimate</a>
+    </div>
+  </div>
+  <div class="copy center">
+    <h1>You only see<br>the Cutting Edge.</h1>
+    <p class="sub">Bespoke glazing installations across the tri-state area and beyond. Designed with you, fabricated in Parsippany, installed by our own&nbsp;crew.</p>
+  </div>
+  <span class="cue" aria-hidden="true"></span>
+</header>
+
+<main>
+<section class="intro center" id="about">
+  <h2 class="rv">Good glass disappears. <span>What you notice is the edge: square, polished, true.</span></h2>
+  <p class="rv">For 28 years we have glazed storefronts, offices, sports halls and homes across the tri-state area and beyond. Curtain wall and entrances for architects and general contractors. Structural glass, railings and frameless enclosures for owners who notice the&nbsp;details.</p>
+  <a class="btn rv" href="#work">See the work</a>
+</section>
+
+<section class="collection" id="collection">
+  <h2 class="rv" style="text-align:center">Made to the opening.</h2>
+  <div class="unit rv">
+    <a href="#estimate" data-project="Curtain wall" aria-label="Curtain wall: request an estimate"><figure class="lite"><img loading="lazy" src="img/c-curtain.webp" alt="Curtain wall glazing reflecting clouds"></figure></a>
+    <a href="#estimate" data-project="Structural glass" aria-label="Structural glass: request an estimate"><figure class="lite"><img loading="lazy" src="img/c-point.webp" alt="Polished steel standoff on a structural glass panel"></figure></a>
+    <a href="#estimate" data-project="Railings or mirrors" aria-label="Glass railings: request an estimate"><figure class="lite"><img loading="lazy" src="img/c-rail.webp" alt="Frameless glass railing on a stone terrace"></figure></a>
+    <a href="https://njshowerdoors.com" aria-label="Frameless showers, on njshowerdoors.com"><figure class="lite"><img loading="lazy" src="img/c-shower.webp" alt="Installer setting a frameless shower panel"></figure></a>
+  </div>
+  <div class="names rv">
+    <a href="#estimate" data-project="Curtain wall"><h3>Curtain wall</h3><span>New build and renovation</span></a>
+    <a href="#estimate" data-project="Structural glass"><h3>Structural glass</h3><span>Entrances, point-fixed</span></a>
+    <a href="#estimate" data-project="Railings or mirrors"><h3>Glass railings</h3><span>Terraces and stairs</span></a>
+    <a href="https://njshowerdoors.com"><h3>Frameless showers</h3><span>On njshowerdoors.com ↗</span></a>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true">
+  <div class="ph" id="bandPh"><img loading="lazy" src="img/band.webp" alt=""></div>
+  <canvas class="light" data-strength=".38"></canvas>
+  <div class="fade"></div>
+  <p>The glass is in the building, not the brochure.</p>
+</div>
+
+<section class="work" id="work">
+  <h2 class="rv">Four buildings. Four openings.</h2>
+
+  <article class="case">
+    <div class="title center">
+      <h3 class="rv">Dover Sportsplex</h3>
+      <span class="meta rv">Dover, NJ · Commercial renovation</span>
+      <p class="lede rv">A 1955 supermarket, closed up for decades. The glass is what opened it again.</p>
+    </div>
+    <div class="unit dover rv">
+      <figure class="lite tall"><img loading="lazy" src="img/dover-arch-bw.webp" alt="The concrete arch glazed in clear glass, black mullions rising to the crown"><figcaption>After · The arch</figcaption></figure>
+      <figure class="lite"><img loading="lazy" src="img/dover-before.webp" alt="Before: the arch filled with tinted panels, signed NJ Department of Labor"><figcaption>Before · Tinted panels</figcaption></figure>
+      <figure class="lite"><img loading="lazy" src="img/dover-night.webp" alt="After, at night: the glazed arch lit from inside"><figcaption>After · Night</figcaption></figure>
+    </div>
+    <div class="story rv">
+      <p>It went up in 1955 as a Food Fair supermarket on Bassett Highway, then served as the NJ Department of Labor and later a candy and tobacco warehouse.</p>
+      <p>West Morris Capital bought it in 2021 and reopened it in late 2022. The concrete arch had been filled with tinted panels and read as a closed wall. Clear glass from the sidewalk to the crown turned the courts into the facade. At night the whole arch&nbsp;glows.</p>
+    </div>
+    <dl class="facts rv">
+      <div><dt>Built</dt><dd>1955</dd></div>
+      <div><dt>Reopened</dt><dd>Late 2022</dd></div>
+      <div><dt>Size</dt><dd>22,000 sq ft</dd></div>
+      <div><dt>Owner</dt><dd>West Morris Capital</dd></div>
+    </dl>
+  </article>
+
+  <article class="case">
+    <div class="title center">
+      <h3 class="rv">District 15Fifteen</h3>
+      <span class="meta rv">Parsippany, NJ · Mixed use</span>
+      <p class="lede rv">A new town center on the former Intel site: 498 homes over about 60,000 square feet of shops. We did the larger custom glazing.</p>
+    </div>
+    <!-- Placeholder photos from district1515.com (the property's leasing site). License or replace before launch. -->
+    <div class="unit beretta district rv">
+      <figure class="lite wide"><img loading="lazy" src="img/district-bw.webp" alt="The main street: a run of glazed shopfronts below four floors of homes"><figcaption>Shopfront glazing</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/district-entry.webp" alt="Full-height glass entrance under a black canopy in a brick facade"><figcaption>Entrance</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/district-aerial.webp" alt="The corner tower and street of shopfront glass from above"><figcaption>Corner tower</figcaption></figure>
+    </div>
+    <dl class="facts rv">
+      <div><dt>Address</dt><dd>1515 Route 10</dd></div>
+      <div><dt>Architect</dt><dd>Thriven Design</dd></div>
+      <div><dt>Developers</dt><dd>Stanbery, Claremont, PCCP</dd></div>
+      <div><dt>Broke ground</dt><dd>May 2023</dd></div>
+    </dl>
+  </article>
+
+  <article class="case">
+    <div class="title center">
+      <h3 class="rv">Fratelli Beretta USA</h3>
+      <span class="meta rv">Flanders, NJ · Industrial</span>
+      <p class="lede rv">A food plant set into the forest, its offices wrapped in cedar and glass. Our scope: the front entrance.</p>
+    </div>
+    <!-- Placeholder photos by Marco Castelletti Studio di Architettura (via The Plan). License or replace before launch. -->
+    <div class="unit beretta rv">
+      <figure class="lite wide"><img loading="lazy" src="img/beretta-bw.webp" alt="The office front: a glass facade behind vertical wood fins, under a storm sky"><figcaption>Office front</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/beretta-entry.webp" alt="The office entrance at dusk, lit glass at the end of a cedar-clad walk"><figcaption>Entrance · Dusk</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/beretta-dusk.webp" alt="The long glazed office front glowing at dusk"><figcaption>Office glazing · Dusk</figcaption></figure>
+    </div>
+    <div class="story rv">
+      <p>The plant covers about 215,000 square feet on a steel frame at the Mount Olive International Trade Center. The production hall is wrapped in dark panels. The offices stand apart in vertical cedar, their glass set behind a screen of wood fins that turns the facade into a&nbsp;lantern at&nbsp;dusk.</p>
+    </div>
+    <dl class="facts rv">
+      <div><dt>Architect</dt><dd>Marco Castelletti Studio di Architettura</dd></div>
+      <div><dt>Builder</dt><dd>Phelps Construction Group</dd></div>
+      <div><dt>Built</dt><dd>2014 to 2015</dd></div>
+      <div><dt>Our scope</dt><dd>Front entrance</dd></div>
+    </dl>
+  </article>
+
+  <!-- DRAFT COPY: the club, the 2013 move to East Hanover and the 2015 4,000 sq ft academy building are public facts.
+       Our scope, the brief and the glass spec below are invented for the mock. Photos are stock placeholders. Confirm with Jason. -->
+  <article class="case">
+    <div class="title center">
+      <h3 class="rv">Red Bull Training Facility</h3>
+      <span class="meta rv">East Hanover, NJ · Sport<span class="sample">Sample copy</span></span>
+      <p class="lede rv">A training ground for a top-flight soccer club. The glass had to take a stray ball and still give the coaches a clear line to every&nbsp;pitch.</p>
+    </div>
+    <div class="unit beretta rv">
+      <figure class="lite wide"><img loading="lazy" src="img/redbull-bw.webp" alt="Placeholder: black-framed windows set in a brick facade"><figcaption>Academy building</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/redbull-glass.webp" alt="Placeholder: laminated glass held by polished steel fittings"><figcaption>Interior partitions</figcaption></figure>
+      <figure class="lite half"><img loading="lazy" src="img/redbull-wall.webp" alt="Placeholder: a field-facing wall of glass"><figcaption>Field wall</figcaption></figure>
+    </div>
+    <div class="story rv">
+      <p>The New York Red Bulls have trained in East Hanover since 2013. When the club added a 4,000 square foot academy building in 2015, the brief was simple: let the players see the fields from the locker rooms, and let the coaches see&nbsp;in.</p>
+      <p>We glazed the entrance and the field-facing wall in laminated, tempered glass, then ran frameless partitions through the treatment and weight rooms. The building opened in time for the spring&nbsp;season.</p>
+    </div>
+    <dl class="facts rv">
+      <div><dt>Club</dt><dd>New York Red Bulls</dd></div>
+      <div><dt>Building</dt><dd>4,000&nbsp;sq&nbsp;ft academy</dd></div>
+      <div><dt>Opened</dt><dd>2015</dd></div>
+      <div><dt>Our scope</dt><dd>Entrance, field wall, interior glass</dd></div>
+    </dl>
+  </article>
+
+  <div class="more">
+    <h3 class="rv">More work</h3>
+    <ul class="rows rv">
+      <li><span class="n">PNC Bank</span><span class="d">One of the largest banks in the United&nbsp;States</span><span class="w">Past client</span></li>
+      <li><span class="n">Audible</span><span class="d">The audiobook company, part of&nbsp;Amazon</span><span class="w">Past client</span></li>
+      <li><span class="n">The Vitamin Shoppe</span><span class="d">National health and wellness&nbsp;retailer</span><span class="w">Past client</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="company center" id="company">
+  <h2 class="rv">Owner run since&nbsp;1998.</h2>
+  <span class="sample rv" style="margin:0">Story is sample copy</span>
+  <!-- DRAFT COPY: founding details beyond 1998, Rockaway, Parsippany and the two owners are invented for the mock. Confirm with Jason. -->
+  <div class="about rv">
+    <p>Jason Scharfstein opened Cutting Edge Glass in Rockaway in 1998 with one truck, a rented bench and a rule he still keeps: measure every opening yourself. The first jobs were frameless showers for local builders. Within a few years those builders were asking for storefronts and office glass, and the shop grew to meet&nbsp;them.</p>
+    <p>His brother Greg joined to run operations, and the business moved to 14&nbsp;Eastmans Road in Parsippany, with room for a full cutting and polishing floor. Today the brothers lead a crew that glazes curtain wall, entrances and structural glass across the tri-state area and beyond, and still builds showers at <a href="https://njshowerdoors.com">njshowerdoors.com</a>. One of them is on every job, from the first measure to the final&nbsp;clean.</p>
+  </div>
+  <ol class="timeline rv" aria-label="Milestones">
+    <li><b>1998</b><span>Opens in Rockaway with one&nbsp;truck</span></li>
+    <li><b>2003</b><span>First commercial storefront</span></li>
+    <li><b>2008</b><span>Moves to Eastmans Road, Parsippany</span></li>
+    <li><b>2015</b><span>Beretta entrance and the Red&nbsp;Bulls&nbsp;academy</span></li>
+    <li><b>2016</b><span>Named Best of&nbsp;Houzz</span></li>
+    <li><b>2022</b><span>Dover Sportsplex reopens</span></li>
+    <li><b>2025</b><span>District 15Fifteen opens</span></li>
+  </ol>
+  <dl class="facts rv">
+    <div><dt>Shop</dt><dd>14 Eastmans Road, Parsippany</dd></div>
+    <div><dt>Crew</dt><dd>Fabricate and install in&#8209;house</dd></div>
+    <div><dt>Contracts</dt><dd>$100K to $1M commercial</dd></div>
+    <div><dt>License</dt><dd>NJ HIC 13VH04431600</dd></div>
+  </dl>
+  <p class="clients rv">Clients and project partners</p>
+  <ul class="logos rv" aria-label="Clients and project partners">
+    <li><img src="img/logos/pnc.svg" alt="PNC" style="height:30px"></li>
+    <li><img src="img/logos/audible.svg" alt="Audible" style="height:34px"></li>
+    <li><img src="img/logos/redbull.svg" alt="Red Bull" style="height:30px"></li>
+    <li><img src="img/logos/vitaminshoppe.png" alt="The Vitamin Shoppe" style="height:42px"></li>
+    <li><img src="img/logos/fratelli-beretta.png" alt="Fratelli Beretta" style="height:52px"></li>
+    <li><img src="img/logos/west-morris-capital-rev.png" alt="West Morris Capital" style="height:58px"></li>
+    <li><img src="img/logos/stanbery.png" alt="Stanbery Development Group" style="height:38px"></li>
+    <li><img src="img/logos/pccp.svg" alt="PCCP" style="height:30px"></li>
+    <li><img src="img/logos/phelps.png" alt="Phelps Construction Group" style="height:36px"></li>
+    <li class="word">Thriven Design</li>
+  </ul>
+</section>
+
+<section class="estimate" id="estimate">
+  <canvas class="light" data-strength=".5" aria-hidden="true"></canvas>
+  <div class="head center">
+    <h2 class="rv">Bring us<br>the opening.</h2>
+    <p class="rv">Tell us about the space. Drawings or photos help, and you can send them after.</p>
+  </div>
+  <form id="form" class="glass rv" aria-label="Request an estimate">
+    <div class="field"><label for="f-name">Name <b aria-hidden="true">*</b></label><input id="f-name" name="name" autocomplete="name" required></div>
+    <div class="field"><label for="f-email">Email <b aria-hidden="true">*</b></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    <div class="field"><label for="f-town">Town</label><input id="f-town" name="town" autocomplete="address-level2"></div>
+    <div class="field"><label for="f-type">Project <b aria-hidden="true">*</b></label><select id="f-type" name="project" required><option value="" selected disabled>Select…</option><option>Curtain wall</option><option>Storefront or entrance</option><option>Structural glass</option><option>Railings or mirrors</option><option>Shower or wine room</option><option>Something else</option></select></div>
+    <div class="field"><label for="f-role">I am a <b aria-hidden="true">*</b></label><select id="f-role" name="role" required><option value="" selected disabled>Select…</option><option>Architect</option><option>General contractor</option><option>Developer or owner</option><option>Designer</option><option>Homeowner</option></select></div>
+    <div class="field full"><label for="f-notes">Tell us about the space</label><textarea id="f-notes" name="notes" rows="3" placeholder="Size, timing, drawings available"></textarea></div>
+    <div class="go"><button class="btn solid" type="submit">Request an estimate</button><small>The owners read every request.</small></div>
+    <p class="sent" id="sent" role="status"></p>
+  </form>
+  <div class="reach">
+    <div><span class="meta">Call</span><a href="tel:+19736649893">973.664.9893</a></div>
+    <div><span class="meta">Shop</span><span>14 Eastmans Road, Parsippany, NJ 07054</span></div>
+    <div><span class="meta">Showers</span><a href="https://njshowerdoors.com">njshowerdoors.com</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="center" id="footer">
+  <img src="img/logo-light.png" alt="Cutting Edge Glass">
+  <nav aria-label="Footer"><a href="#collection">Collection</a><a href="#work">Work</a><a href="#company">Company</a><a href="#estimate">Estimate</a></nav>
+  <span>14 Eastmans Road, Parsippany, NJ 07054 · <a href="tel:+19736649893">973.664.9893</a></span>
+  <span class="legal">Cutting Edge Glass, Inc. · NJ HIC 13VH04431600 · © <span id="yr">2026</span></span>
+</footer>
+
+<nav class="pill glass" id="pill" aria-label="Quick navigation">
+  <a class="home" href="#top" aria-label="Back to top"><i></i></a>
+  <button id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  <a class="est" href="#estimate">Estimate</a>
+</nav>
+<div class="menu" id="menu">
+  <a href="#about">About</a>
+  <a href="#collection">Collection</a>
+  <a href="#work">Work</a>
+  <a href="#company">Company</a>
+  <a href="#estimate">Get an estimate</a>
+  <p class="small">973.664.9893 · 14 Eastmans Road, Parsippany</p>
+</div>
+
+<script>
+(() => {
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* menu */
+  const btn = $('#menuBtn');
+  const setMenu = open => { document.body.classList.toggle('menu-open', open); btn.setAttribute('aria-expanded', open); btn.textContent = open ? 'Close' : 'Menu'; };
+  btn.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('.menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+  $$('[data-project]').forEach(a => a.addEventListener('click', () => { $('#f-type').value = a.dataset.project; }));
+
+  /* reveal */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+
+  /* pill: shows after the hero, steps aside over the estimate form and footer */
+  const pill = $('#pill'), est = $('#estimate');
+  const heroPh = $('#heroPh'), bandPh = $('#bandPh');
+  function onScroll() {
+    const y = scrollY, vh = innerHeight;
+    pill.classList.toggle('show', y > vh * .7 && est.getBoundingClientRect().top > vh * .85);
+    if (still) return;
+    if (y < vh * 1.2) heroPh.style.transform = `translate3d(0,${(y * .22).toFixed(1)}px,0)`;
+    const r = bandPh.parentElement.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < vh) bandPh.style.transform = `translate3d(0,${(((r.top + r.height / 2) - vh / 2) * -.12).toFixed(1)}px,0)`;
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* estimate form: opens a pre-filled email until a form service is connected */
+  $('#form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const body = [...f.entries()].map(([k, v]) => `${k[0].toUpperCase() + k.slice(1)}: ${v}`).join('\n');
+    location.href = `mailto:sales@njshowerdoors.com?subject=${encodeURIComponent('Estimate request: ' + f.get('project'))}&body=${encodeURIComponent(body)}`;
+    $('#sent').innerHTML = 'Your email app should open with the request filled in. If it doesn’t, call <a href="tel:+19736649893">973.664.9893</a>.';
+  });
+
+  /* light through glass: soft caustics, nearly white, slow */
+  const FS = `precision mediump float;uniform vec2 r;uniform float t;uniform float a;
+  float ridge(vec2 p,float t){vec2 q=p;float v=0.;for(int k=0;k<5;k++){float f=float(k);
+  q+=.55*vec2(sin(q.y*1.3+t*.45+f*1.1),cos(q.x*1.1-t*.38+f*2.3));v+=.035/(abs(sin(q.x)*cos(q.y))+.035);}return v/5.;}
+  void main(){vec2 uv=gl_FragCoord.xy/r.y*3.;float s=.012;
+  vec3 c=pow(vec3(ridge(uv+vec2(s,s*.5),t),ridge(uv,t),ridge(uv-vec2(s,s*.5),t)),vec3(3.2));
+  float lit=smoothstep(.0,1.,gl_FragCoord.y/r.y)*smoothstep(1.25,.2,abs(gl_FragCoord.x/r.x-.5)*2.);
+  gl_FragColor=vec4(c*vec3(.9,1.,.97)*a*lit,1.);}`;
+  const lights = [];
+  $$('canvas.light').forEach(cv => {
+    const gl = cv.getContext('webgl', { antialias: false, premultipliedAlpha: false });
+    if (!gl) { cv.remove(); return; }
+    const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    const pr = gl.createProgram();
+    gl.attachShader(pr, sh(gl.VERTEX_SHADER, 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}'));
+    gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS));
+    gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { cv.remove(); return; }
+    gl.useProgram(pr);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    lights.push({ cv, gl, uR: gl.getUniformLocation(pr, 'r'), uT: gl.getUniformLocation(pr, 't'), uA: gl.getUniformLocation(pr, 'a'), amt: +cv.dataset.strength || .4, on: false });
+  });
+  const vis = new IntersectionObserver(es => es.forEach(e => { const L = lights.find(l => l.cv === e.target); if (L) L.on = e.isIntersecting; }));
+  lights.forEach(L => vis.observe(L.cv));
+  let T = 8, prev = performance.now();
+  const draw = L => {
+    const d = Math.min(devicePixelRatio || 1, 1.25), w = Math.round(L.cv.clientWidth * d / 1.5), h = Math.round(L.cv.clientHeight * d / 1.5);
+    if (L.cv.width !== w || L.cv.height !== h) { L.cv.width = w; L.cv.height = h; }
+    L.gl.viewport(0, 0, w, h); L.gl.uniform2f(L.uR, w, h); L.gl.uniform1f(L.uT, T); L.gl.uniform1f(L.uA, L.amt);
+    L.gl.drawArrays(L.gl.TRIANGLES, 0, 3);
+  };
+  if (still) { requestAnimationFrame(() => lights.forEach(draw)); return; }
+  const frame = now => {
+    T += Math.min(.1, (now - prev) / 1000) * .55; prev = now;
+    lights.forEach(L => { if (L.on) draw(L); });
+    requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
