@@ -41,7 +41,7 @@ This mockup mixes **verified facts** with **placeholder story** written to show 
 - The brief ("let the players see the fields… let the coaches see in")
 - Scope: entrance, field-facing wall in laminated tempered glass, frameless partitions in treatment and weight rooms
 - "Opened in time for the spring season"
-- Photos are Adobe Stock placeholders, not the building
+- Photos are from newyorkredbulls.com (the real facility), used as placeholders
 
 ## Other placeholders
 - Fratelli Beretta photos: Marco Castelletti Studio di Architettura via The Plan. License or replace.
